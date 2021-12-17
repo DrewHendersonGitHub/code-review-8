@@ -51,4 +51,13 @@ describe '#Word' do
     end
   end
 
+  describe('#update') do
+    it("updates a word by id") do
+      word = Word.new(name: "recieve")
+      word.save()
+      word.update("receive")
+      expect(word.name).to(eq("receive"))
+    end
+  end
+
 end
