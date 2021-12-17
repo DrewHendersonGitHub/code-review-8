@@ -1,5 +1,8 @@
 class Word
-  def hello_world
-    "Hello world!"
+
+  @@words = {}
+  
+  def self.all
+    @@words.values()
   end
 end
