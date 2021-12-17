@@ -22,4 +22,9 @@ class Word
     self.name.eql?(word2.name)
   end
 
+  def self.clear
+    @@words = {}
+    @@total_rows = 0
+  end
+
 end
