@@ -41,4 +41,14 @@ describe '#Word' do
     end
   end
 
+  describe('.find') do
+    it("finds a word by its id") do
+      word = Word.new(name: "table")
+      word.save()
+      word2 = Word.new(name: "ball")
+      word2.save()
+      expect(Word.find(word.id)).to(eq(word))
+    end
+  end
+
 end
