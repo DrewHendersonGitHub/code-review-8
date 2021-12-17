@@ -60,4 +60,15 @@ describe '#Word' do
     end
   end
 
+  describe('#delete') do
+    it("deletes an word by id") do
+      word = Word.new(name: "water")
+      word.save()
+      word2 = Word.new(name: "slowly")
+      word2.save()
+      word.delete()
+      expect(Word.all).to(eq([album2]))
+    end
+  end
+
 end
