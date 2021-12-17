@@ -20,4 +20,12 @@ describe '#Word' do
     end
   end
 
+  describe('#==') do
+    it("two words are equal if they have the same attributes as each other") do
+      word = Word.new(name: "cat")
+      word2 = Word.new(name: "cat")
+      expect(word).to(eq(word2))
+    end
+  end
+
 end
