@@ -28,4 +28,13 @@ describe '#Word' do
     end
   end
 
+  describe('.clear') do
+    it("clears all words") do
+      word = Word.new(name: "hello")
+      word.save()
+      Word.clear()
+      expect(Word.all).to(eq([]))
+    end
+  end
+
 end
