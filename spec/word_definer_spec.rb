@@ -12,9 +12,9 @@ describe '#Word' do
 
   describe('#save') do
     it("saves a word") do
-      word = Word.new("Giant Steps", nil)
+      word = Word.new(name: "dog")
       word.save()
-      word2 = Word.new("Blue", nil)
+      word2 = Word.new(name: "Frog")
       word2.save()
       expect(Word.all).to(eq([word, word2]))
     end
