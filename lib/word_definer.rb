@@ -17,4 +17,9 @@ class Word
   def save
     @@words[self.id] = Word.new(name: self.name, id: self.id)
   end
+  
+  def ==(word2)
+    self.name.eql?(word2.name)
+  end
+
 end
