@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 also_reload 'lib/**/*.rb'
 require 'pry'
 require './lib/word_definer'
+require './lib/definition'
 
 get '/' do
   @words = Word.all
