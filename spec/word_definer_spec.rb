@@ -67,7 +67,7 @@ describe '#Word' do
       word2 = Word.new(name: "slowly")
       word2.save()
       word.delete()
-      expect(Word.all).to(eq([album2]))
+      expect(Word.all).to(eq([word2]))
     end
   end
 
