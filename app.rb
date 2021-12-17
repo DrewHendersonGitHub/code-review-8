@@ -19,9 +19,13 @@ get('/words/new') do
 end
 
 post('/words') do
-  name = params[:word_name]
-  word = Word.new(name: name)
+  word = Word.new(name: params[:word_name])
   word.save()
   @words = Word.all()
   erb(:words)
+end
+
+get('/words/:id') do
+  @word = Word.find(params[:id].to_i())
+  erb(:word)
 end
