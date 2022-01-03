@@ -1,5 +1,4 @@
 <h1>Word Definitions</h1>
-<h2>http://localhost:4567/</h2>
 <h3>List of Words:</h3>
 
 <% if @words.any? %>
@@ -12,7 +11,7 @@
   <p>There are currently no words to display.</p>
 <% end %>
 
-<form action="/albums">
+<form action="/words">
   <div class="form-group">
     <label for="search">Search</label>
     <input id="search" name="search" class="form-control" type="text">

@@ -1,6 +1,6 @@
 require 'rspec'
-require 'word_definer'
 require 'pry'
+require 'word'
 
 describe '#Word' do
 
@@ -71,4 +71,17 @@ describe '#Word' do
     end
   end
 
+  describe('#definitions') do
+    it("returns the definitions of a word") do
+      Definition.clear
+      word = Word.new(name: "taco")
+      word.save()
+      definition = Definition.new(name: "a taco is a tortilla sandwich", word_id: word.id)
+      definition.save()
+      definition2 = Definition.new(name: "it's a taco", word_id: word.id)
+      definition2.save()
+      expect(word.definitions).to(eq([definition, definition2]))
+    end
+  end
+  
 end
